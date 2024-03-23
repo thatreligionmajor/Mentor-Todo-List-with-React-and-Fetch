@@ -78,9 +78,9 @@ const Home = () => {
 				Let's Do This
 			</h1>
 			<ul>
-				<li>
+				<li className="">
 					<div class="input-group mb-3">
-						<input type="text" class="form-control" 
+						<input type="text" className="form-control mt-4" 
 							aria-label="create a new task" 
 							aria-describedby="inputValue" 
 							placeholder="create a new task"
@@ -94,7 +94,7 @@ const Home = () => {
 							}}
 						/>
 						<div class="input-group-append">
-							<button class="btn btn-outline-primary" type="button"
+							<button className="btn btn-outline-primary mt-4" type="button"
 								onClick={() => {
 									addTodo(inputValue)
 									setInputValue("")
@@ -106,16 +106,24 @@ const Home = () => {
 					</div>	
 				</li>
 				{todos.map((t, index) => (
-					<li key={index} style={{ display: "flex", justifyContent: "space-between" }}>
-						{t.label}
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16" onClick={() => deleteTodo(index)}>
-							<path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
-						</svg>
-					</li>
+				<li key={index} className="d-flex justify-content-between p-2">
+					{t.label}
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16" onClick={() => deleteTodo(index)}>
+						<path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
+					</svg>
+				</li>
 				))}
 				<div>
 					<strong>
-						<em>{todos.length} tasks</em>
+						<em>
+							{
+								todos.length == 1 
+								? `${todos.length} task left`
+								: todos.length > 1 
+								? `${todos.length} tasks left` 
+								: "Do or do not, there is no try."
+							}
+						</em>
 					</strong>
 				</div>
 			</ul>
