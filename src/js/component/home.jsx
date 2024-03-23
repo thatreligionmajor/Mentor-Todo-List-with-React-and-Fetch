@@ -74,7 +74,7 @@ const Home = () => {
 
 	return (
 		<div className="container mt-5">
-			<h1>
+			<h1 className="text-center">
 				Let's Do This
 			</h1>
 			<ul>
