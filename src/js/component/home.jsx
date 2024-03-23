@@ -73,26 +73,37 @@ const Home = () => {
 	}
 
 	return (
-		<div className="container">
+		<div className="container mt-5">
 			<h1>
-				<em>
-					<strong>My Todo List:</strong>
-				</em>
+				Let's Do This
 			</h1>
 			<ul>
 				<li>
-					<input
-						type="text"
-						onChange={(e) => setInputValue(e.target.value)}
-						value={inputValue}
-						onKeyDown={(e) => {
-							if (e.key === "Enter") {
-								addTodo(inputValue)
-								setInputValue("")
-							}
-						}}
-						placeholder="create a new task"
-					/>
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" 
+							aria-label="create a new task" 
+							aria-describedby="inputValue" 
+							placeholder="create a new task"
+							onChange={(e) => setInputValue(e.target.value)}
+							value={inputValue}
+							onKeyDown={(e) => {
+								if (e.key === "Enter") {
+									addTodo(inputValue)
+									setInputValue("")
+								}
+							}}
+						/>
+						<div class="input-group-append">
+							<button class="btn btn-outline-primary" type="button"
+								onClick={() => {
+									addTodo(inputValue)
+									setInputValue("")
+								}}
+							>
+								submit
+							</button>
+						</div>
+					</div>	
 				</li>
 				{todos.map((t, index) => (
 					<li key={index} style={{ display: "flex", justifyContent: "space-between" }}>

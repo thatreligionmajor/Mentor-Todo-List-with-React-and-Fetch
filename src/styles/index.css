@@ -5,30 +5,31 @@
 
 */
 
-body{
-    margin-top: 100px;
-    background-color: #ccc5c5;
+body {
+    color: white;
+    background-image: linear-gradient(to top, #071a55, #152767, #213479, #2b428c, #36519f);
+    min-height: 100dvh;
 }
+
 ul{
     list-style: none;
     padding: 0;
     margin-bottom:0;
 }
+
 ul li {
-    border: 1px solid rgb(96, 93, 93);
+    /* border: 1px solid rgb(96, 93, 93); */
     list-style: none;
     padding: 5px;
-    width:auto; 
-
-
+    width: auto; 
 }
-h1{
+
+h1 {
     text-align: center;
-
 }
-input{
+
+input {
     border:none;
     width: 100%;
     background-color: #ccc5c5;
-
 }
