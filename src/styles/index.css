@@ -13,7 +13,7 @@ body {
 
 .list {
     border-radius: 15px;
-    background-color: #071a55;
+    background-image: linear-gradient(to bottom, #071a51, #061950, #05174f, #05164d, #04154c);
 }
 
 ul{
