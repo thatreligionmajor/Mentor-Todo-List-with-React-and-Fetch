@@ -6,9 +6,14 @@
 */
 
 body {
-    color: white;
-    background-image: linear-gradient(to top, #071a55, #152767, #213479, #2b428c, #36519f);
+    color: #8eaaf8;
+    background-image: linear-gradient(to top, #213b87, #26408d, #2c4693, #314b99, #36519f);
     min-height: 100dvh;
+}
+
+.list {
+    border-radius: 15px;
+    background-color: #071a55;
 }
 
 ul{
@@ -19,7 +24,6 @@ ul{
 
 ul li {
     list-style: none;
-    /* padding: 5px; */
     width: auto; 
 }
 

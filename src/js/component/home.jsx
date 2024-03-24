@@ -77,8 +77,8 @@ const Home = () => {
 			<h1 className="text-center">
 				Let's Do This
 			</h1>
-			<ul>
-				<li className="">
+			<ul className="list p-4">
+				<li>
 					<div class="input-group mb-3">
 						<input type="text" className="form-control mt-4" 
 							aria-label="create a new task" 
