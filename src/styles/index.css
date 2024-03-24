@@ -22,13 +22,18 @@ ul{
     margin-bottom:0;
 }
 
+input {
+    border:none;
+    width: 100%;
+    background-color: #ccc5c5;
+}
+
 ul li {
     list-style: none;
     width: auto; 
 }
 
-input {
-    border:none;
-    width: 100%;
-    background-color: #ccc5c5;
+.todo:hover {
+    border-radius: 10px;
+    background-color: #010F3D; 
 }
